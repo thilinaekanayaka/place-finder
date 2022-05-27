@@ -9,7 +9,7 @@ import MapIcon from '@mui/icons-material/Map';
 import './RecentSearches.css';
 import Typography from '@mui/material/Typography';
 
-//Redux
+//Redux imports
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedRecentSearch } from "../redux/searchDataSlice";
 

@@ -14,10 +14,11 @@ import {
 import "@reach/combobox/styles.css";
 import './Places.css';
 
-//Redux
+//Redux imports
 import { useSelector, useDispatch } from 'react-redux';
 import { addSearchData } from "../redux/searchDataSlice";
 
+// Autocomplete component for the input and selection
 const PlacesAutocomplete = ({ setSelected }) => {
   const dispatch = useDispatch();
   const {
@@ -67,6 +68,7 @@ const PlacesAutocomplete = ({ setSelected }) => {
   );
 };
 
+// Map component that renders the Google map
 const Map = () => {
   const center = useMemo(() => ({ lat: 3.139003, lng: 101.686855 }), []);
   const [selected, setSelected] = useState(center);
@@ -95,11 +97,12 @@ const Map = () => {
   );
 }
 
+// Main component that loads the Google scripts
+// Note : API Key shared here only for the demo purposes
 const Places = () => {
   const [libraries] = useState(['places']);
-  const [onLoad, setLoaded] = useState(false);
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDKNLajbe4t24eGdT-Q8XW6zX4llhoCmtM",
+    googleMapsApiKey: "AIzaSyDKNLajbe4t24eGdT-Q8XW6zX4llhoCmtM", // Bad practice, shared only for the purpose of this project
     libraries: libraries,
   });
 
