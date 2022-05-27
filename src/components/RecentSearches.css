@@ -1,0 +1,18 @@
+.search-list-item {
+  cursor: pointer;
+}
+
+.search-list-header {
+  padding: 30px;
+  background-color: #727273;
+  color: white;
+}
+
+.search-list-header-icon {
+  padding-right: 10px;
+}
+
+.search-list-empty {
+  padding: 30px;
+  color: #727273;
+}
